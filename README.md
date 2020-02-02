@@ -2,13 +2,20 @@
 
 一个在 vue 项目中用来保存和恢复滚动容器的滚动条进度的工具包。
 
+## 安装
+
+```
+npm i vue-save-scroll  // or
+yarn add vue-save-scroll
+```
+
 ## 用法
 
 该包共导出了 4 个成员：
 
 - **ScrollView**：滚动容器，实际的 DOM 标签为`<div>`
-- **saveScrollMixin**：以混入形式使用，对页面中所有的 ScrollView 组件进行滚动条进度保存与恢复，分别在`activated`和`beforeRouteLeave`生命周期中进行，也就是说你需要在带缓存(keep-alive)的组件或路由中使用。
-- **saveWindowScrollMixin**：以混入形式使用，保存与回复当前页面的窗口滚动条进度，用法与`saveScrollMixin`相同。
+- **saveScrollMixin**：以混入形式使用，对页面中所有的 **ScrollView** 组件进行滚动条进度保存与恢复，分别在`activated`和`beforeRouteLeave`生命周期中进行，也就是说你需要在带缓存(keep-alive)的组件或路由中使用。
+- **saveWindowScrollMixin**：以混入形式使用，保存与恢复当前页面的窗口滚动条进度，用法与`saveScrollMixin`相同。
 - **saveWindowScroll**：保存
 
 **ScrollView** 的 props：
@@ -38,6 +45,7 @@
 
     <footer>
       <!-- 这里演示如何在非页面跳转的情况保存和恢复滚动条 -->
+      <button @click="visibleScrollView ? hide() : show()">toggle</button>
       <scroll-view v-if="visibleScrollView" ref="scrollView"></scroll-view>
       <div v-else></div>
     </footer>
