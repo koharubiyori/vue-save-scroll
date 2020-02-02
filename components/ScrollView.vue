@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { scrolls } from './saveScrollMixin.js'
+import { scrolls } from '../mixins/saveScrollMixin.js'
 /**
  * 针对非页面跳转时保存和恢复进度条，对外暴露两个方法：saveScroll、loadSavedScroll
  */
