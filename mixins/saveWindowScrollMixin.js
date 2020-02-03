@@ -3,7 +3,7 @@ export const scrolls = {}
 export default {
   activated() {
     if (scrolls[this._uid]) {
-      const { x, y } = scrolls[this._uid]
+      const { x, y } = getSavedWindowScroll(this)
       window.scrollTo(x, y)
     }
   },
@@ -19,4 +19,8 @@ export function saveWindowScroll(currentViewInstance) {
     x: window.scrollX,
     y: window.scrollY
   }
+}
+
+export function getSavedWindowScroll(currentViewInstance) {
+  return scrolls[currentViewInstance._uid]
 }
