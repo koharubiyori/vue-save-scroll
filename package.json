@@ -1,6 +1,6 @@
 {
   "name": "vue-save-scroll",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "在vue项目中存储和恢复滚动容器的滚动条进度。",
   "main": "index.js",
   "repository": {
