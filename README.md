@@ -25,8 +25,8 @@ yarn add vue-save-scroll
 
 **ScrollView** 组件拥有以下实例方法，你可以通过 ref 的形式进行调用：
 
-- `saveScroll` 保存滚动条进度
-- `loadScroll` 读取滚动条进度
+- `saveScroll` 保存滚动条进度，一般只在非跳转页面时需要保存滚动进度条的情况下使用
+- `loadScroll` 读取滚动条进度，同上
 - `getSavedScroll` 获取上一次保存的滚动条进度
 
 ## 示例
