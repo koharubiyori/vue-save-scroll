@@ -1,5 +1,5 @@
 <template>
-  <!-- 滚动容器，本身只是一个div，不包含任何样式 -->
+  <!-- 滚动容器 -->
   <div class="scroll-view">
     <slot></slot>
   </div>
@@ -49,3 +49,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.scroll-view {
+  overflow: auto;
+}
+</style>
